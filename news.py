@@ -17,7 +17,7 @@ def get_report_one():
     content_cursor.execute(sql_query)
     report_lines = content_cursor.fetchall()
     print "\n Report One: What are the most popular \
-        three articles of all time?"
+three articles of all time?"
     for row in report_lines:
         print row[0] + " -- " + str(row[1]) + " views"
     DB.close()
@@ -39,7 +39,7 @@ def get_report_two():
     content_cursor.execute(sql_query)
     report_lines = content_cursor.fetchall()
     print '\n Report Two: Who are the most popular \
-        article authors of all time?'
+article authors of all time?'
     for row in report_lines:
         print row[0] + ' -- ' + str(row[1]) + ' views'
     DB.close()
@@ -58,7 +58,7 @@ def get_report_three():
     content_cursor.execute(sql_query)
     report_lines = content_cursor.fetchall()
     print '\n Report Three: On which days did more than \
-        1% of requests lead to errors'
+1% of requests lead to errors'
     for row in report_lines:
     	if row[1] > 1:
             print row[0] + ' -- ' + str(row[1]) + '% errors'
