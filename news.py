@@ -70,6 +70,8 @@ def get_report_three():
         for row in report_lines:
     	    if row[1] > 1:
                 print row[0] + ' -- ' + str(row[1]) + '% errors'
+    except:
+        print ('Unable to connect to the database')
 
 
 if __name__ == '__main__':
